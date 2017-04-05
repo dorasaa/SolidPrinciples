@@ -10,6 +10,14 @@ namespace SolidPrinciples
     {
         static void Main(string[] args)
         {
+            var customers = new List<Customer>();
+            customers.Add(new GoldCustomer(new EmailLogger()));
+            customers.Add(new SilverCustomer(new EmailLogger()));
+            //customers.Add(new enquiry());   
+            foreach (var customer in customers)
+            {
+                customer.Add();
+            }
         }
     }
 }
